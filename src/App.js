@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shop.component';
+import Header from './components/header/header.component';
 
 import {
   BrowserRouter as Router,
@@ -9,6 +10,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
 
 const HatsPage = () => (
   <div>
@@ -19,17 +21,16 @@ const HatsPage = () => (
 function App() {
   return (
     <div>
-      <Router>
-        <Switch>
-          <Route exact path='/'>
-            <HomePage/>  
-          </Route>      
-          <Route path='/shop'>
-            <ShopPage/>
-          </Route>
-        </Switch>  
-      </Router>
-      
+    <Header/>
+    <Switch>
+      <Route exact path='/' component={HomePage}>
+      </Route>
+      <Route path='/shop' component={ShopPage}>
+      </Route>
+      <Route path='/signin' component={SignInAndSignUpPage}>
+      </Route>      
+    </Switch>
+  
     </div>
   );
 }
