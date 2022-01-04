@@ -38,9 +38,6 @@ export const createUserProfileDocument = async (userAuth, ...additionalData) => 
             console.log("User not created: "+error.message);
         }
     }
-    else{
-        console.log("User already exists: "+ docRef.id);
-    }
 
     return(docRef);
 }
