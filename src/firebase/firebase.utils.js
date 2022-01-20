@@ -16,7 +16,7 @@ initializeApp(config);
 
 export const auth = getAuth();
 export const db = getFirestore();
-export {onSnapshot} from 'firebase/firestore';
+export {onSnapshot, collection} from 'firebase/firestore';
 export {createUserWithEmailAndPassword} from 'firebase/auth';
 export {signInWithEmailAndPassword} from 'firebase/auth';
 
